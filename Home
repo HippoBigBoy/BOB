@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="icon" type="image/x-icon" href="bigblackdonkey.ico">
+  <style>
+    body {
+      background-image: url("shrekfest-shrek-super-slam.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      background-color: Green;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+    .menu {
+      text-align: center;
+    }
+    .menu a {
+      text-decoration: none;
+      color: Green;
+      padding: 10px 20px;
+      font-weight: bold;
+      display: block;
+    }
+    .menu a:hover {
+      background-color: #99cc99;
+      border-radius: 5px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: Green;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .search-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .search-box {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 60%;
+      font-size: 16px;
+    }
+    .search-button {
+      background-color: Green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Shrek Is Hot</h1>
+  </div>
+  <div class="container">
+    <div class="menu">
+      <div class="dropdown">
+        <a href="javascript:void(0)">Menu &#9662;</a>
+        <div class="dropdown-content">
+          <a href="Home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <p>Welcome to our Shrek website. Feel free to explore!</p>
+    <div class="search-container">
+      <input type="text" class="search-box" id="searchInput" placeholder="Search...">
+      <button class="search-button" onclick="searchPage()">Search</button>
+    </div>
+  </div>
+
+  <script>
+    function searchPage() {
+      var query = document.getElementById("searchInput").value.toLowerCase();
+      if (query === "shrek") {
+        window.location.href = "shrek.html"; // Redirect to the search results page (replace with the actual page URL)
+      } else if (query === "about") {
+        window.location.href = "about.html"; // Redirect to the search results page (replace with the actual page URL)
+      } else if (query === "contact") {
+        window.location.href = "contact.html"; // Redirect to the search results page (replace with the actual page URL)
+      } else {
+        alert("No matching results found.");
+      }
+    }
+  </script>
+</body>
+</html>
